@@ -9,4 +9,4 @@ module Paperclip
       false
     end
   end
-end
+end 
