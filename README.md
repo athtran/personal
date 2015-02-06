@@ -1,6 +1,5 @@
-# One Month Rails
+# Alan Tran
 
-This is the pinteresting sample application for
-[*One Month Rails](http://onemonthrails.com)
+This is the source for my personal [Website](http://alantran.co)
 
-by [Mattan Griffel](http://mattangriffel.com)
+by [Alan Tran](http://twitter.com/athtran)
