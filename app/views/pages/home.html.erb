@@ -1,0 +1,22 @@
+<div class="container">
+	<%= image_tag("longboard.jpg", :class => "img-responsive") %>
+
+	<div class="row">
+    <div class="col-md-4">
+      <h3>Welcome</h3>
+      <p>Hi there! Welcome to my website. You can use the navigation bar at the top to navigate the site. This is still under construction so I hope you'll excuse any mess you might find!</p>
+      <p><%= link_to "View details", about_path%></a></p>
+    </div>
+    <div class="col-md-4">
+      <h3>Profiting From The Prophets</h3>
+       <p>Security Analyst Recommendations and Stock Returns. I take a brief look into whether investors can profit from publically available information in the form of recommendations from security analyts.</p>
+      <p><%= link_to "View details", thoughts_path%></p>
+    </div>
+    <div class="col-md-4">
+      <h3>More Than Just Words</h3>
+       <p>Quantifying Language to Measure Firms' Fundamentals. I examine a recent academic paper by Paul C. Tetlock et al. Can we use the language in news reports to predict accounting earnings and stock returns?</p>
+      <p><%= link_to "View details", thoughts_path%></p>
+    </div>
+	</div>
+</div>
+
