@@ -1,5 +1,16 @@
-<div class="container">
-      <h1 class="entry-title">Board Games - The good and the bad</h1>
+
+<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+    <ul id="myTab" class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active"><a href="#one" id="one-tab" role="tab" data-toggle="tab" aria-controls="one" aria-expanded="true">Board Game Analytics</a></li>
+      <li role="presentation"><a href="#two" role="tab" id="two-tab" data-toggle="tab" aria-controls="two">Social Analytics</a></li>
+      <li role="presentation"><a href="#three" role="tab" id="three-tab" data-toggle="tab" aria-controls="three">Analyst Recommendations</a></li>
+      <li role="presentation"><a href="#four" role="tab" id="four-tab" data-toggle="tab" aria-controls="four">More Than Words</a></li>
+      <li role="presentation" class="dropdown">
+      </li>
+    </ul>
+    <div id="myTabContent" class="tab-content">
+      <div role="tabpanel" class="tab-pane fade in active" id="one" aria-labelledBy="one-tab">
+        <h1 class="entry-title">Board Games - The good and the bad</h1>
         <p><strong>Data mining with boardgamegeek.com</strong><p>
         <p>Many of us have fond memories with board games as kids. From blasting an opponent's ship out of the water in <a href="http://boardgamegeek.com/boardgame/2425/battleship">Battleship</a> or forcing your little brother into bankruptcy in <a href="http://boardgamegeek.com/boardgame/1406/monopoly">Monopoly</a>.</p>
         <p>These games, however, are by and far, some of the worst board games in existence.</p>
@@ -28,13 +39,9 @@
         </ul>
         <p>Each game has their own unique mechanic for engaging the player, challenger the player, and keeping the player vested in the outcome of the game. If you haven't heard of any of the modern board game titles I strongly suggest you grab some friends and visit a local board game cafe. There is so much more to the world of board games than Risk and Monopoly.</p>
         <p>Written by Alan Tran, February 3, 2015 </p>
-    </div>   
-
-      <p>&nbsp;</p> 
-      <p>&nbsp;</p>
-
-    <div class="container">
-      <h1 class="entry-title">Quantifying Social Behaviour Across Time</h1>
+      </div>
+      <div role="tabpanel" class="tab-pane fade" id="two" aria-labelledBy="two-tab">
+        <h1 class="entry-title">Quantifying Social Behaviour Across Time</h1>
         <p><strong>Social Metrics</strong><p>
         <p>Is it possible to quantify social behaviour?</p>
         <p>I recently graduated from the University of Waterloo, and I was curious to see how my social life changes as time goes on. I wanted to find a way to quantify my social relationships with different people, but most of all, I wanted to see if I would slowly become less social as the change from University to real life impacted me. So I decided to keep a personal log of "Social Encounters" that I would be able to use to quantify my relationships. This daily log would have to contain the enough variables to hold meaningful data, while being simple enough for daily input to not become tedious. I settled on three variables: name, duration of encounter, and date.</p>
@@ -57,26 +64,22 @@
         <p>I am very excited with the potential that these visualizations show!</p>
         <p>Lots more comin' up</p>
         <p>Written by Alan Tran, January 15, 2015 </p>
-    </div>
-              <p>&nbsp;</p>
-              <p>&nbsp;</p>
-
-    <div class="container">
-
-      <h1 class="entry-title">Profiting from the&nbsp;Prophets</h1>
+      </div>
+      <div role="tabpanel" class="tab-pane fade" id="three" aria-labelledBy="three-tab">
+        <h1 class="entry-title">Profiting from the&nbsp;Prophets</h1>
         <p><strong>Security Analyst Recommendations and Stock Returns</strong></p>
         <p>In their paper &#8220;Can Investors Profit from the Prophets?&#8221;, Brad Barber, Reuven Lehavy, Maureen McNichols and Brett Trueman investigate whether investors can profit from publicly available recommendations of security analysts.</p>
         <p>Academic Theory and Wall Street practice are clearly on opposing ends of this issue. Academically, investors should not be able to profit on publicly available information such as earnings reports or analyst recommendations (returning to the market efficiency debate). In practice, research firms and investment banking companies spend a great amount of resources generating analyst recommendations, under the assumption that they will be able to utilize them to create consistent abnormal profits. This paper aims to answer the simple question: Can we profit off publicly available security analyst recommendations?</p>
         <p>Barber et al. do this by using trading strategies of purchasing stocks with the most favourable recommendations by analysts, as well as shorting stocks with the least favourable recommendations by analysts. Over the 1986 to 1996 period, their portfolio ended up with abnormal returns of at least 4 percent (4.13 and -4.91). However, their investment strategies requires a great deal of trading, and with that, high transaction costs. After accounting for those transaction costs, they find that none of their strategies generate an abnormal net return that is reliably greater than zero. This suggests that there are market inefficiencies, however they are not easily exploitable by traders, allowing these inefficiencies to continue to exist.</p>
         <p>I decided to conduct my own research with a couple of colleagues, to see if we could profit off security analysts recommendations in a more recent time period (2008 to 2012, as opposed to 1986 to 1996).</p>
         <p>We extracted historical Bloomberg data from January 2008 to December 2012 on the firms listed in the S&amp;P 500, as of the beginning of our time period. Our main variable was Analyst Ratings, which is the consensus average analyst ratings for one firm, on one date, for many different analysts, based on a range from 1 to 5 (1 being a sell recommendation, 5 being a buy recommendation). Any missing dates in our data set was assumed to take the value of the previous available date for analyst ratings, assuming no new information for the firm is available.  We ended up with just under 1825 points of data for each of the 500~ firms in the S&amp;P 500. We used this to construct our portfolio, which we would hold for 5 years.</p>
-				<%= image_tag("profitfromprophets11.png", :class => "img-responsive pull-right") %>
+        <%= image_tag("profitfromprophets11.png", :class => "img-responsive pull-right") %>
         <p>To decide which companies we would include in our portfolio, we opted to use the top quartile of firms, based on our consensus analyst ratings variable. We thought this would represent the &#8216;top picks&#8217; of a majority of analysts, and would yield the greatest returns. One thing to note is that during this time period, we had a great dip in the market and subsequent upswing, so the average analyst ratings during this time period is rather high (around 4), so a majority of firms in our sample size were classified as &#8216;buy&#8217;. We chose the greatest amongst these, and value weighted them according to market capitalization values.</p>
         <p>We decided to build 4 different portfolio, solely based on the frequency in which we would rebalance or adjust the companies in our portfolio. Our daily rebalancing portfolio would evaluate the analyst ratings daily, and rebuild the portfolio daily, based on new information coming out on the market (reflected in the changing analyst ratings). Our monthly rebalancing portfolio would do this monthly, our yearly portfolio would rebalance yearly. Our last portfolio would be constructed at the beginning of the 5 year test period, and would not change until the end.</p>
         <p>We ended up with these returns for our cumulative 5 year return.</p>
         <p>As you can see, all four of our portfolio outperformed the SPX (which, netted a negative return due to the state of the market). Unsurprisingly, our daily rebalancing portfolio achieved the highest return, presumably based on the notion that our daily portfolio takes advantage of new market information faster than the rest of our portfolios. Curiously, our year rebalancing portfolio performed better than our monthly rebalancing portfolio. This may be attributed to random chance, or it may indicate that our methodology has some flaws and inaccuracies, as it was not consistent with our original hypothesis.</p>
         <p>Below is the cumulative return of our portfolios, compared to the SPX, on a timeline.</p>
-				<%= image_tag("profitfromprophets2.png", :class => "img-responsive") %>
+        <%= image_tag("profitfromprophets2.png", :class => "img-responsive") %>
         <p>At a quick glance, you can see that all of our portfolios roughly match the S&amp;P 500 Index in direction and movement, however at all points on our timeline, our portfolios consistently outperform the market. This gives me evidence against the efficient market theory, as according to these results, we were able to outperform the market based on publicly available information, in the form of analyst recommendations. Based solely on the information attained in our study, I would recommend a passive portfolio investment strategy, constructed with the top 125 stocks in the S&amp;P 500 based on consensus analyst recommendation, rotating on a yearly basis.</p>
         <p>However, there are some next steps to our study that have not been conducted.</p>
         <ol>
@@ -88,17 +91,13 @@
         <p>Despite the list above, I am confident to say that yes, we can profit from the prophets, and this study adds to the vast body of knowledge in the debate for market efficiency.</p>
         <p>You can check out the full study <a href="http://webuser.bus.umich.edu/rlehavy/Published_JF.pdf">here</a>.</p>
         <p> Written by Alan Tran, May 1, 2014 </p>
-      </div><!-- .entry-content -->
-      
-              <p>&nbsp;</p>
-                    <p>&nbsp;</p>
-                
-      <div class="container">  
+      </div>     
+      <div role="tabpanel" class="tab-pane fade" id="four" aria-labelledBy="four-tab">
         <h1 class="entry-title" id="morethanwordsanchor">More Than Just Words</h1>
         <p><strong>Quantifying Language to Measure Firms' Fundamentals</strong></p>
         <blockquote><p class="muted">Language is conceived in sin and science is its redemption</p></blockquote>
         <p>A paper from Paul C. Tetlock, Maytal Saar-Tsechansky and Sofus Macskassy, published in 2008, asks an interesting question. Can we use the language in news report to predict accounting earnings and stock returns? Academically, we learn that the value of a stock is equal to the expected discounted values of the firm&#8217;s cash flows conditional on investors&#8217; information sets, which include qualitative descriptions of firms&#8217; business environments, operations, and prospects in the financial press. Empircally, we find that movement in stock prices does not correspond to quantitative measures of firm fundamentals. So what&#8217;s going on here? Tetlock et al. turn to qualitative variables to try to explain stock movement.</p>
-				<%= image_tag("morethanwords2.jpg", :class => "img-responsive pull-left") %>
+        <%= image_tag("morethanwords2.jpg", :class => "img-responsive pull-left") %>
         <p>They analyse this by seeing how qualitative information, represented by a fraction of negative words in a widely read financial news column, is incorporated in market valuations. Why use language? One advantage of quantifying language is that it allows us to look at the impact of a wide variety of events, whereas most studies focus on a particular event type, such as earnings announcements or mergers. Another advantage is that news reports are a very important source of information for many investors. Very few investor actually observe firm fundamentals firsthand, and therefore rely on news reports and gain their information second-hand.</p>
         <p>How does Tetlock et al. conduct his study? The data is taken from DJNS and WSJ stories about individual firms in the S&amp;P 500 index from 1980 to 2004, and categorizes each word in the article either positive or negative, based on the Harvard-IV-4 psychosocial dictionary. They hypothesize that the fractional amount of negative words in an article is related to the impact of the news event on that stock&#8217;s value. For example consider the following quote from a January 8, 1999 DJNS article about Microsoft:</p> 
         <blockquote><p class="muted">&#8216;The alleged pricing abuse will only get worse if Microsoft is not disciplined sternly by the antitrust court&#8217; said Mark Cooper, director of research for Consumer Federal of America</p></blockquote>
@@ -109,12 +108,15 @@
             <li>Negative words are incorporated in stock prices with a slight delay</li>
             <li>Negative words relating to firm fundamentals are more useful in predicting earnings and returns</li>
           </ol>
-				        
-				<p>&nbsp;</p>
-				<p>This means that yes, according to the research conducted by Tetlock et al., we can effectively use news reports to predict stock movements. Using this information, the authors of the paper created a trading strategy revolving around the short-run impacts of negatives words. They show that a daily news based trading strategy would earn substantial risk-adjusted returns in a frictionless world with no trading costs.</p>
-				<%= image_tag("morethanwords3.jpg", :class => "img-responsive pull-right") %>
-				<p>However the results of the trading strategy are conducted under the assumption of zero transaction costs, which is not entirely feasible in real life. To estimate the effect of transaction costs, they recalculate trading strategy returns under the assumption that the trader must incur a round-trip transaction cost of between 0 and 10 bps.</p>
-				<p>The table to the right displays the abnormal and raw cumulative news-based strategy returns under the cost assumptions of 0 to 10 bps in trading costs.  We can see that the trading strategy is no longer profitable after accounting for a reasonable level of transaction costs, for example 10 bps. The study shows us that it is nearly impossible to profit off the negative words found in news reports, less we get rid of transaction costs.</p>
-				<p>But some things to consider, the study&#8217;s time period is quite outdated. The financial markets in 1980 look completely different than they do now. Access to information is more available and faster, as technology continues to grow. We may even be able to <a href="https://www.robinhood.com/">completely remove trading costs</a> for retail investors.</p>
-				<p>You can check out the full study <a href="http://www0.gsb.columbia.edu/faculty/ptetlock/papers/Tetlock_et_al_JF_08_More_Than_Words.pdf">here</a>.</p>
-				<p>Written by Alan Tran, April 28, 2014 </p>
+                
+        <p>&nbsp;</p>
+        <p>This means that yes, according to the research conducted by Tetlock et al., we can effectively use news reports to predict stock movements. Using this information, the authors of the paper created a trading strategy revolving around the short-run impacts of negatives words. They show that a daily news based trading strategy would earn substantial risk-adjusted returns in a frictionless world with no trading costs.</p>
+        <%= image_tag("morethanwords3.jpg", :class => "img-responsive pull-right") %>
+        <p>However the results of the trading strategy are conducted under the assumption of zero transaction costs, which is not entirely feasible in real life. To estimate the effect of transaction costs, they recalculate trading strategy returns under the assumption that the trader must incur a round-trip transaction cost of between 0 and 10 bps.</p>
+        <p>The table to the right displays the abnormal and raw cumulative news-based strategy returns under the cost assumptions of 0 to 10 bps in trading costs.  We can see that the trading strategy is no longer profitable after accounting for a reasonable level of transaction costs, for example 10 bps. The study shows us that it is nearly impossible to profit off the negative words found in news reports, less we get rid of transaction costs.</p>
+        <p>But some things to consider, the study&#8217;s time period is quite outdated. The financial markets in 1980 look completely different than they do now. Access to information is more available and faster, as technology continues to grow. We may even be able to <a href="https://www.robinhood.com/">completely remove trading costs</a> for retail investors.</p>
+        <p>You can check out the full study <a href="http://www0.gsb.columbia.edu/faculty/ptetlock/papers/Tetlock_et_al_JF_08_More_Than_Words.pdf">here</a>.</p>
+        <p>Written by Alan Tran, April 28, 2014 </p>
+      </div>
+    </div>
+  </div>
