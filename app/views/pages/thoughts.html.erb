@@ -1,16 +1,59 @@
 
 <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
     <ul id="myTab" class="nav nav-tabs" role="tablist">
-      <li role="presentation" class="active"><a href="#one" id="one-tab" role="tab" data-toggle="tab" aria-controls="one" aria-expanded="true">Board Game Analytics</a></li>
-      <li role="presentation"><a href="#two" role="tab" id="two-tab" data-toggle="tab" aria-controls="two">Social Analytics</a></li>
-      <li role="presentation"><a href="#three" role="tab" id="three-tab" data-toggle="tab" aria-controls="three">Analyst Recommendations</a></li>
-      <li role="presentation"><a href="#four" role="tab" id="four-tab" data-toggle="tab" aria-controls="four">More Than Words</a></li>
+      <li role="presentation" class="active"><a href="#one" id="one-tab" role="tab" data-toggle="tab" aria-controls="one" aria-expanded="true">SMS Analytics</a></li>
+      <li role="presentation"><a href="#two" role="tab" id="two-tab" data-toggle="tab" aria-controls="two">Board Game Analytics</a></li>
+      <li role="presentation"><a href="#three" role="tab" id="three-tab" data-toggle="tab" aria-controls="three">Social Analytics</a></li>
+      <li role="presentation"><a href="#four" role="tab" id="four-tab" data-toggle="tab" aria-controls="four">Analyst Recommendations</a></li>
+      <li role="presentation"><a href="#five" role="tab" id="five-tab" data-toggle="tab" aria-controls="five">More Than Words</a></li>
       <li role="presentation" class="dropdown">
       </li>
     </ul>
     <div id="myTabContent" class="tab-content">
       <div role="tabpanel" class="tab-pane fade in active" id="one" aria-labelledBy="one-tab">
-        <h1 class="entry-title">Board Games - The good and the bad</h1>
+        <h1 class="entry-title">SMS Analytics</h1>
+        <p><strong>Visualizing trends in text messages</strong></p>
+        <div class="row">
+          <div class="col-md-10">
+            <%= image_tag("90k 1.png", :class => "img-responsive") %>
+          </div>
+          <div class="col-md-2">
+            <p>The dawn of smartphones in 2010 brought with it interesting capabilities concerning personal data collection and retainment. With it came the potential to effortlessly backup and restore messages between people. The preceding graph shows number of records of text messages over time, by the month. The colours represent unique individuals. The sample includes over 90 000 text messages between myself and 321 indivduals, spanning the course of 3.5 years. Individuals have been filtered out if they contain entries less than 25 texts in that month.</p>
+            <p>The first thing you'll notice is that my SMS activity seems to rise abnormally in 2013 and decrease in 2014. Why is this?</p>
+          </div>
+          <div class="col-md-10">
+            <%= image_tag("90k 2.png", :class => "img-responsive") %>
+          </div>
+          <div class="col-md-2">
+            <p>Different colours represent unique individuals. This is important because the first thing you'll notice is that we have one outlier that is taking up a large majority of the sample.</p>
+            <p>Highlighting this single person we can clearly see activity boom suddenly and decrease slowly. In terms of personal relationships these are signs of a relationship strongly developing and then deteriorating slowly.</p>
+            <p>This is what the visualization of a romantic relationship looks like.</p>
+          </div>         
+          <div class="col-md-10">
+            <%= image_tag("90k 3.png", :class => "img-responsive") %>
+          </div>
+          <div class="col-md-2">
+            <p>Since this data relates to me personally I have taken the liberty to label important highlights of my relationship with this individual to explain the changes in text volume.</p>
+            <p>The most fascinating thing to me about this whole experiment is how drastically events in the relationship affected the data. After the initial "honeymoon" phase there is an expected decline in activity, with a large boom in activity after the relationship turned into long-distance.</p>
+          </div>
+          <div class="col-md-10">
+            <%= image_tag("90k 4.png", :class => "img-responsive") %>
+          </div>
+          <div class="col-md-2">
+            <p>To gain further insight into this data, we can exclude this individual entirely from our sample. This reduces the number of entries in our sample from 90 000 to 45 000.</p>
+            <p>One thing to take note of in the fourth graph is how my relationship with everyone else as a whole changed over the years. You can see a large crater-like shape during the period where I was in the relationship, and a subsequent spike in activity during the break-up as I returned to my friends for support.</p>
+            <p>This visualization exercise shows textbook behaviour of a young invidual in a relationship.</p>
+          </div>
+          <div class="col-md-12">
+            <br>
+            <p>I believe this kind of analysis has the capability to show fascinating insights into someone's life. However in a growing digital world with more and more mediums of communication, I do realize the limitations of focusing on just SMS to do analysis. I have plans to include other popular forms of communication in the analysis in the future, such as Facebook messager, WhatsApp and Skype.</p>
+            <p>Written by Alan Tran, February 13, 2015 </p>
+
+          </div>
+        </div>
+      </div>
+      <div role="tabpanel" class="tab-pane fade" id="two" aria-labelledBy="two-tab">
+        <h1 class="entry-title">Board Games</h1>
         <p><strong>Data mining with boardgamegeek.com</strong><p>
         <p>Many of us have fond memories with board games as kids. From blasting an opponent's ship out of the water in <a href="http://boardgamegeek.com/boardgame/2425/battleship">Battleship</a> or forcing your little brother into bankruptcy in <a href="http://boardgamegeek.com/boardgame/1406/monopoly">Monopoly</a>.</p>
         <p>These games, however, are by and far, some of the worst board games in existence.</p>
@@ -40,7 +83,7 @@
         <p>Each game has their own unique mechanic for engaging the player, challenger the player, and keeping the player vested in the outcome of the game. If you haven't heard of any of the modern board game titles I strongly suggest you grab some friends and visit a local board game cafe. There is so much more to the world of board games than Risk and Monopoly.</p>
         <p>Written by Alan Tran, February 3, 2015 </p>
       </div>
-      <div role="tabpanel" class="tab-pane fade" id="two" aria-labelledBy="two-tab">
+      <div role="tabpanel" class="tab-pane fade" id="three" aria-labelledBy="three-tab">
         <h1 class="entry-title">Quantifying Social Behaviour Across Time</h1>
         <p><strong>Social Metrics</strong><p>
         <p>Is it possible to quantify social behaviour?</p>
@@ -65,7 +108,7 @@
         <p>Lots more comin' up</p>
         <p>Written by Alan Tran, January 15, 2015 </p>
       </div>
-      <div role="tabpanel" class="tab-pane fade" id="three" aria-labelledBy="three-tab">
+      <div role="tabpanel" class="tab-pane fade" id="four" aria-labelledBy="four-tab">
         <h1 class="entry-title">Profiting from the&nbsp;Prophets</h1>
         <p><strong>Security Analyst Recommendations and Stock Returns</strong></p>
         <p>In their paper &#8220;Can Investors Profit from the Prophets?&#8221;, Brad Barber, Reuven Lehavy, Maureen McNichols and Brett Trueman investigate whether investors can profit from publicly available recommendations of security analysts.</p>
@@ -92,7 +135,7 @@
         <p>You can check out the full study <a href="http://webuser.bus.umich.edu/rlehavy/Published_JF.pdf">here</a>.</p>
         <p> Written by Alan Tran, May 1, 2014 </p>
       </div>     
-      <div role="tabpanel" class="tab-pane fade" id="four" aria-labelledBy="four-tab">
+      <div role="tabpanel" class="tab-pane fade" id="five" aria-labelledBy="five-tab">
         <h1 class="entry-title" id="morethanwordsanchor">More Than Just Words</h1>
         <p><strong>Quantifying Language to Measure Firms' Fundamentals</strong></p>
         <blockquote><p class="muted">Language is conceived in sin and science is its redemption</p></blockquote>
@@ -120,3 +163,4 @@
       </div>
     </div>
   </div>
+
