@@ -53,25 +53,31 @@
         </div>
       </div>
       <div role="tabpanel" class="tab-pane fade" id="two" aria-labelledBy="two-tab">
+        <div class="container">
         <h1 class="entry-title">Board Games</h1>
-        <p><strong>Data mining with boardgamegeek.com</strong><p>
-        <p>Many of us have fond memories with board games as kids. From blasting an opponent's ship out of the water in <a href="http://boardgamegeek.com/boardgame/2425/battleship">Battleship</a> or forcing your little brother into bankruptcy in <a href="http://boardgamegeek.com/boardgame/1406/monopoly">Monopoly</a>.</p>
-        <p>These games, however, are by and far, some of the worst board games in existence.</p>
-        <p>Introducing Boardgamegeek.com. This website hosts a database of over 75 000 games, where thousands of users can log in and rate them on a scale from 1 to 10. The chart below shows all of the games in Boardgamegeek's database that has over 150 user ratings, which produces a sample of 3 303 games. I have labeled some of games in question.</p>
-        <center><%= image_tag("BG worst.png", :class => "img-responsive") %></center>
-        <p>These outliers have low ratings when compared to the rest of the sample, but relatively high number of plays. This means that they are played frequently, and are poor in quality. The most notable being:</p>
-        <ul>
-          <li><a href="http://boardgamegeek.com/boardgame/1406/monopoly">Monopoly</a></li>
-          <li><a href="http://boardgamegeek.com/boardgame/181/risk">Risk<a></li>
-          <li><a href="http://boardgamegeek.com/boardgame/2425/battleship">Battleship</a></li>
-          <li><a href="http://boardgamegeek.com/boardgame/2921/game-life">The Game of Life</a></li>
-          <li><a href="http://boardgamegeek.com/boardgame/5432/snakes-and-ladders">Snakes and Ladders</a></li> 
-        </ul>
-        <p>What makes these games rank so low? Many of them have some aspects that modern board game enthusiasts detest. The first being heavily luck-driven, the second being player elimination. Games that rely entirely on the roll of the die do not have any player decision making, while player elimination excludes players once they have lost (or won).</p>
-        <p>What does a good game look like? The chart below contains the same data set, however I have labeled some noteworthy titles.</p>
-        <p>&nbsp;</p>
-        <center><%= image_tag("BG best.png", :class => "img-responsive") %></center>
-        <p>&nbsp;</p>
+        </div>
+        <div class="col-md-5">
+          <p><strong>Data mining with boardgamegeek.com</strong><p>
+          <p>Many of us have fond memories with board games as kids. From blasting an opponent's ship out of the water in <a href="http://boardgamegeek.com/boardgame/2425/battleship">Battleship</a> or forcing your little brother into bankruptcy in <a href="http://boardgamegeek.com/boardgame/1406/monopoly">Monopoly</a>.</p>
+          <p>These games, however, are by and far, some of the worst board games in existence.</p>
+          <p>Introducing Boardgamegeek.com. This website hosts a database of over 75 000 games, where thousands of users can log in and rate them on a scale from 1 to 10. The following chart shows all of the games in Boardgamegeek's database that has over 150 user ratings, which produces a sample of 3 303 games. I have labeled some of games in question.</p>
+          <p>These outliers have low ratings when compared to the rest of the sample, but relatively high number of plays. This means that they are played frequently, and are poor in quality. The most notable being:</p>
+          <ul>
+            <li><a href="http://boardgamegeek.com/boardgame/1406/monopoly">Monopoly</a></li>
+            <li><a href="http://boardgamegeek.com/boardgame/181/risk">Risk<a></li>
+            <li><a href="http://boardgamegeek.com/boardgame/2425/battleship">Battleship</a></li>
+            <li><a href="http://boardgamegeek.com/boardgame/2921/game-life">The Game of Life</a></li>
+            <li><a href="http://boardgamegeek.com/boardgame/5432/snakes-and-ladders">Snakes and Ladders</a></li> 
+          </ul>
+          <p>What makes these games rank so low? Many of them have some aspects that modern board game enthusiasts detest. The first being heavily luck-driven, the second being player elimination. Games that rely entirely on the roll of the die do not have any player decision making, while player elimination excludes players once they have lost (or won).</p>
+        </div>
+        <div class="col-md-7">
+          <%= image_tag("BG worst.png", :class => "img-responsive") %>
+        </div>
+
+        <div class="col-md-5">
+
+        <p>What does a good game look like? The following chart contains the same data set, however I have labeled some noteworthy titles.</p>
         <p>The games labeled above have considerably higher ratings, with huge exposure. In general, they perform well because of lack of aspects I mentioned above (luck-driven, player elimination).</p>
         <ul>
           <li><a href="http://boardgamegeek.com/boardgame/13/settlers-catan">Settlers of Catan</a></li>
@@ -82,6 +88,10 @@
         </ul>
         <p>Each game has their own unique mechanic for engaging the player, challenger the player, and keeping the player vested in the outcome of the game. If you haven't heard of any of the modern board game titles I strongly suggest you grab some friends and visit a local board game cafe. There is so much more to the world of board games than Risk and Monopoly.</p>
         <p>Written by Alan Tran, February 3, 2015 </p>
+        </div>
+        <div class="col-md-7">
+          <%= image_tag("BG best.png", :class => "img-responsive pull-right") %>
+        </div>
       </div>
       <div role="tabpanel" class="tab-pane fade" id="three" aria-labelledBy="three-tab">
         <h1 class="entry-title">Quantifying Social Behaviour Across Time</h1>
